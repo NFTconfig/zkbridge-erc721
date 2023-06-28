@@ -9,10 +9,10 @@ async function main() {
   // Deployment parameters
   const name = "MyNFT"; // Contract name
   const symbol = "NFT"; // Contract symbol
-  const nativeChainId = 1234; // Native chain ID
-  const nativeContractString = "0xBa2863c494E37Bd2f66eae809A3db1cfb1fA9f06"; // String representation of the native contract address
+  const nativeChainId = 115; // zkBridge linea testnet chain ID
+  const nativeContractString = ""; // String representation of the native contract address
   const nativeContractBytes32 = ethers.utils.hexZeroPad(nativeContractString, 32);
-  const bridgeAddress = "0xBa2863c494E37Bd2f66eae809A3db1cfb1fA9f06"; // Bridge address
+  const bridgeAddress = "0x045CcD08a8FB170b069980C7aC761D426A09882a"; // zkBridge Entrypoint goerli
 
   // Deploy the TemplateErc721 contract
   const TemplateErc721 = await ethers.getContractFactory("TemplateErc721");
