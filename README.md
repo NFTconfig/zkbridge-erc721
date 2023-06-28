@@ -6,9 +6,9 @@
     
 
 ```javascript
-  const name = "your nft name"; // Contract name
-  const symbol = "your nft symbol"; // Contract symbol
-  const nativeChainId = 'your native chainId'; // Native chain ID, e.g., 42
+  const name = "Polyhedra Testnet NFT"; // Contract name
+  const symbol = "Polyhedra Testnet NFT"; // Contract symbol
+  const nativeChainId = 'zkbridge native chainId'; // Native chain ID, e.g., 42
   const nativeContractString = "your native nft address"; // e.g., 0xBa2863c494E37Bd2f66eae809A3db1cfb1fA9f06
   const bridgeAddress = "zkBridge contract address"; // Bridge address
 ```
