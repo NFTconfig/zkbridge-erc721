@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract ZKBridgeErc721 is ERC721, Ownable {
     uint16 public nativeChainId;
-    bytes32 public nativeContract;
+    bytes32 public nativeContractAddress;
     address public bridge;
     mapping(uint256 => string) private _tokenURIs;
 
@@ -18,7 +18,7 @@ contract ZKBridgeErc721 is ERC721, Ownable {
         address bridge_
     ) ERC721(name_, symbol_) {
         nativeChainId = nativeChainId_;
-        nativeContract = nativeContract_;
+        nativeContractAddress = nativeContract_;
         bridge = bridge_;
     }
 
@@ -46,5 +46,13 @@ contract ZKBridgeErc721 is ERC721, Ownable {
     function _setTokenURI(uint256 tokenId, string memory tokenURI_) internal {
         require(_exists(tokenId), "URI set of nonexistent token");
         _tokenURIs[tokenId] = tokenURI_;
+    }
+
+    function chainId() public view returns (uint16) {
+        return nativeChainId;
+    }
+
+    function nativeContract() public view returns (bytes32) {
+        return nativeContractAddress;
     }
 }
